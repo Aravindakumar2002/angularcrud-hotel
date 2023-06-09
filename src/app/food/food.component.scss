@@ -1,0 +1,42 @@
+table {
+    margin: 20px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    // text-align: center;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .btn {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    cursor: pointer;
+  }
+  .actions{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  h3{
+    margin-top: 5%;
+    text-align: center;
+  }

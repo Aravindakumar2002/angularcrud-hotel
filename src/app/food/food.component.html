@@ -1,0 +1,42 @@
+<div class="container">
+  <h3>ADD MENU DETAILS</h3>
+  <form>
+        <div class="form-group">
+          <label for="foodInput">Food</label>
+          <input type="text" class="form-control" name="food" [(ngModel)]="food" id="foodInput" placeholder="Enter food">
+        </div>
+        <div class="form-group">
+          <label for="priceInput">Price</label>
+          <input type="number" class="form-control" name="price" [(ngModel)]="price" id="priceInput" placeholder="Enter price">
+        </div>
+        
+        <button type="button" (click)="addfood()" class="btn btn-primary">Submit</button>
+        <button type="button" (click)="updatefood()" class="btn btn-primary">Update</button>
+
+      </form>
+      <h3>MENU</h3>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Food</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let e of list">
+            <td>{{ e.Id }}</td>
+            <td>{{ e.Food }}</td>
+            <td>{{ e.Price }}</td>
+            <td>
+              <div class="actions">
+                <h4><i (click)="editfood(e.Id)" class="bi bi-pencil-square edit-icon" ></i></h4>
+                <h4><i (click)="deletefood(e.Id)" class="bi bi-trash3"></i></h4>
+              </div>
+             
+              </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
